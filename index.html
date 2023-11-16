@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Age calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+<!-- --------------------FORM------------------ -->
+        <form action="post">
+          <div class="input-box">
+            <label for="day" id="day-label">Day</label>
+            <input type="number" placeholder="DD" id="day" />
+            <label id="day-error" for="day"></label>
+          </div>
+          <div class="input-box">
+            <label for="month" id="month-label">Month</label>
+            <input type="number" placeholder="MM" id="month" />
+            <label id="month-error" for="day"></label>
+          </div>
+          <div class="input-box">
+            <label for="year" id="year-label">Year</label>
+            <input type="number" placeholder="YYYY" id="year" />
+            <label id="year-error" for="day"></label>
+          </div>
+        </form>
+<!-- -----Horizintal Line & Icon ---------------------- -->
+          <div class="line">
+            <div class="hr"></div>
+            <svg id="submit" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+          </div>
+
+ <!--------- RESULT AREA ----------------------  -->
+            <div class="result">
+              <span class="main-span">
+              <span id="show-year">- -</span>
+              <span>years</span>
+            </span>
+            <span class="main-span">
+              <span id="show-month">- -</span>
+              <span>months</span>
+            </span>
+            <span class="main-span">
+              <span id="show-day">- -</span>
+              <span>days</span>
+            </span>
+              
+            </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

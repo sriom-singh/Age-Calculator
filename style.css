@@ -1,0 +1,138 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+}
+
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--Off-white);
+    padding: 0;
+    
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Off-white);
+}
+.box{
+    width: 600px;
+    height: 500px;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--White);
+    border-radius: 15px 15px 30% 15px;
+}
+form{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.4rem;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 0.4rem;
+    letter-spacing: 1.2px;
+    font-family: 'Outfit', sans-serif;
+
+    text-transform: uppercase;
+}
+label{
+    
+    font-size: 0.6rem;
+    opacity: 0.9;
+    color: var(--Smokey-grey);
+}
+input{
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif; 
+    border: 1px solid var(--Light-grey);
+}
+input:hover{
+    cursor: pointer;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.line{
+    width: 95%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin: 1.5rem 0;
+   
+}
+.hr{
+    width: 90%;
+    height: 0;
+    border: 1px solid var(--Light-grey);
+}
+.line>svg{
+    width: 2rem;
+    border-radius: 50%;
+    height: 2rem;
+    padding: 1rem;
+    background: var(--Purple);
+}
+.line>svg:hover{
+    background-color: var(--Off-black);
+    cursor: pointer;
+}
+
+.result>span{
+    display: flex;
+}
+.main-span>span{
+    font-weight: 800;
+    font-size: 4rem;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+}
+.main-span>span:first-child{
+    color: var(--Purple);
+}
+#day-error,
+#month-error,
+#year-error{
+    color: var(--Light-red);
+    font-style: italic;
+}
+
+@media screen and (max-width:700px) {
+    *{
+        font-size: 10px;
+    }
+    .box{
+        width: 300px;
+        height: 300px;
+    }
+    .container{
+        height: 600px;
+    }
+}
